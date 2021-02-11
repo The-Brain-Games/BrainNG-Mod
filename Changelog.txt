@@ -11,3 +11,10 @@ V3:
 
 V3.2&3.3:
 - Turned down music volume
+
+V4:
+- Updated to fit latest BeamMP update
+V4.1:
+- First version to be on the git
+- Added/removed some comments
+- Updated motd
