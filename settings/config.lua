@@ -1,9 +1,3 @@
---[[
-Created by vJoeyz#5115 (Uncle Joey)
-Installed on 2Fast Racing Servers
-Please do not redistribute
-]]--
-
 local config = {}
 config.reset = {}
 config.motd = {}
@@ -40,7 +34,7 @@ config.reset.disabledMessage = "Vehicle resetting is disabled on this server." -
 
 config.motd.enabled = false -- enables or disables the motd
 config.motd.type = "htmlOnly" -- htmlOnly: simple (large) motd || selectableVehicle: motd with the ability to select a vehicle
-config.motd.title = "Welcome to 2Fast Racing Community!"
+config.motd.title = "Welcome to BrainNG Community!"
 config.motd.description = [[
     [center][img]uj_base/Brain-logo.png[/img][/center]
     [h2]Introduction[/h2]
