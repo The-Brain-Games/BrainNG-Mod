@@ -1,0 +1,13 @@
+V1:
+- BrainMP's new loading screen!
+
+V2:
+- New loading Screen
+- motd turned off
+- all restrictions turned off
+
+V3:
+- edited to inlude new music since music now works
+
+V3.2&3.3:
+- Turned down music volume
