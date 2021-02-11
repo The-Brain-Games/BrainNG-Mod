@@ -22,4 +22,4 @@ Variables:
 The mod is setup to show this loading screen, consisting of the BrainNG Logo when loading into the game:
 ![Loading Screen](https://github.com/The-Brain-Games/BrainNG-Mod/blob/main/ui/modules/loading/drive/drive_loading_1.jpg?raw=true "The Loading screen")
 
-It also plays the NCS release of the song [Invisible](https://www.youtube.com/watch?v=QglaLzo_aPk) by Julius Dreisig & Zeus X Crona
+It also plays the NCS release of the song [Invisible](https://www.youtube.com/watch?v=QglaLzo_aPk) by Julius Dreisig & Zeus X Crona.
