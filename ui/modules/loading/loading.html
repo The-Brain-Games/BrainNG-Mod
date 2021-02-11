@@ -1,0 +1,186 @@
+<div ng-if="loading.img" class="loadingBackground" layout="column" layout-align="end center" class="md-padding" style="background: url({{ ::loading.img }}) no-repeat;">
+
+<svg width="475px" height="25px">
+  <defs>
+    <clipPath id="clipped">
+      <circle cx="12.5px" cy="12.5px" r="12.5px"></circle>
+	  <rect x="12.5px" y="0%" width="450px" height="25px"></rect>
+	  <!--<circle cx="462.5px" cy="12.5px" r="12.5px"></circle>-->
+    </clipPath>
+  </defs>
+</svg>
+
+
+<style>
+/**** utils, misc ****/
+@font-face {
+  font-family: 'Play';
+  src: url("common/Play-regular.ttf");
+}
+@font-face {
+  font-family: 'NewsCycle';
+  src: url("common/NewsCycle-Regular.ttf");
+}
+.loadingBackground {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  pointer-events: none;
+  box-shadow: inset 0 0 15em 1em black;
+  background-color: white !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/**** BOX ****/
+#progressBox {
+  position:absolute;
+  left:50%;
+  -webkit-transform: translate(-50%, 0);
+  bottom:0%;
+  margin-top:-150px;
+  width:500px;
+  height:150px;
+  min-height:150px;
+  max-height:150px;
+}
+
+/**** ICON ****/
+.icon {
+  border: 2px solid #ff6600;
+  border-radius:10px;
+  height:50px;
+  width:50px;
+  min-width:50px;
+  background: linear-gradient(0deg, #ff6600 0%, #ff6600 50%, rgba(0,0,0,0) 50%);
+  background-size: 200% 200%;
+  margin:12px;
+}
+@keyframes WiggleAnimation {
+  0%{margin-bottom:0}
+  50%{margin-bottom:5px}
+  100%{margin-bottom:0}
+}
+.iconImg {
+  width:90%;
+  height:90%;
+  margin:5%;
+}
+/**** progress bar ****/
+.progressBarForeground {
+  position:absolute;
+  width:100%;
+  height:25px;
+  min-height:25px;
+  animation: ProgressBarAnimation 2s linear infinite;
+  background-size: 200% 100%;
+  background: linear-gradient(135deg, #ff6600 0%, #ff6600 30%,#fab905 50%, #ff6600 70%,  #ff6600 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: url(#clipped);
+  border-radius:12px;
+  left:0px;
+}
+
+@keyframes ProgressBarAnimation {
+  0%{background-position:100% 0%}
+  50%{background-position:0 0}
+  100%{background-position:-100% 0%}
+}
+.progressBarBackground {
+  width:95%;
+  height:25px;
+  min-height:25px;
+  background-color: #666;
+  border-radius:12px;
+  margin-left:10px;
+  position:relative;
+  clip-path: url(#clipped);
+}
+.progressBarPercentText{
+  position:absolute;
+  right:0;
+  font-family:Play;
+  font-size:16px;
+  padding-right:20px;
+  color:white;
+  overflow: hidden;
+}
+/**** progress status ****/
+.progressStatus {
+  width:95%;
+  min-height:35px;
+  border-radius:0px;
+  font-family:Play;
+  font-size:30px;
+  color:white;
+  margin-top:15px;
+  margin-left:8px;
+}
+
+.progressStatusHistory {
+  border-radius:0px;
+  font-family:NewsCycle;
+  font-size:16px;
+  color:rgb(160, 160, 160);
+  width:100%;
+  margin-left:10px;
+  margin-top:15px;
+  min-height: 78px;
+}
+
+/**** tips bar ****/
+.tipsBar {
+  background-color:rgba(0,0,0,0.3);
+  position:absolute;
+  left:0;
+  right:0;
+  height:120px;
+  bottom:8%;
+  z-index: 100000;
+}
+.tipsBarTitle {
+  font-family:Play;
+  font-size:25px;
+  font-weight:bold;
+  color:white;
+  margin-left:120px;
+  margin-top:25px;
+  z-index: 100000;
+}
+.tipsBarTip {
+  font-family:NewsCycle;
+  font-size:20px;
+  color:white;
+  margin-top:24px;
+  margin-left:10px;
+  margin-right:220px;
+  z-index: 100000;
+}
+</style>
+	<!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EEhB3m6n4dc?rel=0;controls=0;showinfo=0;autoplay=1" frameborder="0"></iframe>-->
+
+  <simple-test></simple-test>
+  <div id="progressBox" layout="column" layout-align="begin begin" class="md-padding">
+      <!--<div layout="row" layout-align="center center" class="md-padding">
+        <animated-icon icon="terrain"></animated-icon>
+        <animated-icon icon="environment"></animated-icon>
+        <animated-icon icon="forest"></animated-icon>
+        <animated-icon icon="meshes"></animated-icon>
+        <animated-icon icon="roads"></animated-icon>
+        <animated-icon icon="beamng"></animated-icon>
+      </div>-->
+      <animated-progress-bar></animated-progress-bar>
+      <!--<animated-progress-status></animated-progress-status>-->
+      <!--<animated-progress-status-history></animated-progress-status-history>-->
+  </div>
+  <!--<tips-bar></tips-bar>-->
+</div>
+<!--<iframe width="0%" height="0%" src="https://www.youtube.com/embed/FVPyFVjZWh4?controls=0&showinfo=0&autoplay=1&start=15" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<audio src="/music/loadingmusic.mp3" autoplay>
+<p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>-->
+
+<embed src="/ui/modules/loading/music/loadingmusic.mp3" loop="true" autostart="true" width="0" height="0"></embed>
