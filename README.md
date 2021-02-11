@@ -17,5 +17,9 @@ You can use BBCodes in your motd, `config.lua` contains a sample.
 Variables:
 * `{serverTime}` prints the current server time (as set in the config)
 
-The mod shows this loading screen, consisting of the BrainNG Logo when loading into the game:
+
+### BrainNG's setup:
+The mod is setup to show this loading screen, consisting of the BrainNG Logo when loading into the game:
 ![Loading Screen](https://github.com/The-Brain-Games/BrainNG-Mod/blob/main/ui/modules/loading/drive/drive_loading_1.jpg?raw=true "The Loading screen")
+
+It also plays the NCS release of the song [Invisible](https://www.youtube.com/watch?v=QglaLzo_aPk) by Julius Dreisig & Zeus X Crona
