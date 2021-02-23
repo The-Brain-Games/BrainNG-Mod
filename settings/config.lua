@@ -48,7 +48,7 @@ config.timesync.offsetHours = 0 -- 0 for utc, can be positive (+) or negative (-
 config.timesync.realtime = true -- whether in-game time should be actively synced with real world time (only works when timesync.enabled = true)
 
 -- NOTE: not all weather settings work on all maps
-config.weathersync.enabled = false -- enables or disables in-game weather syncing
+config.weathersync.enabled = true -- enables or disables in-game weather syncing
 config.weathersync.cloudCover = 30 -- 0-100 (0 = no clouds; 100 = very cloudy)
 config.weathersync.windSpeed = 1 -- 0-10 (0 = no wind; 10 = very windy) -- affects clouds and rain
 config.weathersync.rainDrops = 20 -- 0-100 (0 = no rain; 100 = very rainy)
